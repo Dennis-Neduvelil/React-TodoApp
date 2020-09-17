@@ -1,25 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {BrowserRouter as Router,Route} from "react-router-dom"
+import About from "./components/about";
+import Head from "./components/Head";
+import todo from "./components/todo";
+import Todoclass from "./components/todoclass";
+import Footer from "./footer";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+        <Head/>
+        <Route path="/" exact component={Todoclass}/>
+        <Route path="/function" component={todo}/>
+        <Route path="/about" component={About}/>
+        <Footer/>
+      </Router>
   );
 }
 
