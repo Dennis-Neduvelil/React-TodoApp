@@ -91,3 +91,6 @@ html {
 .justify{text-align: justify; margin: 25px;}
 footer h4{text-align: center; color:teal;}
 footer h4 span{ font-size: 1.1rem;}
+
+::-webkit-scrollbar{background-color: #ffc796; width: 7px;}
+::-webkit-scrollbar-thumb{background-color: teal; border-radius: 15px;}
