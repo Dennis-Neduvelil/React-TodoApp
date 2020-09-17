@@ -2,7 +2,7 @@
 # React Todo App
 Simple Todo App developed using react.js
 
-Take a look [Click Here For Live Preview](https://).
+Take a look [Click Here For Live Preview](http://dennis-neduvelil.github.io/React-TodoApp/).
 
 Hey guys
 pardon my english:)
