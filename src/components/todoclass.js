@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import "./todoapp.css";
+
+import TodoComponent from "./todoComponent";
 
 class Todoclass extends Component {
   state = {
@@ -140,53 +141,29 @@ class Todoclass extends Component {
   //Render
   render() {
     const { textArray, textInput, btncng, btn, warning, status } = this.state;
+    const {
+      enterkey,
+      inputHandler,
+      btnHandler,
+      deleteItem,
+      updateHandler,
+      crossItem,
+    } = this;
     return (
-      <div>
-        <div className="fdiv">
-          <div className="cdiv">
-            <h1>Todo App</h1>
-
-            <p className={warning}>{status}</p>
-            <form action="" onSubmit={this.enterkey}>
-              <input
-                name="textInput"
-                value={textInput}
-                onChange={this.inputHandler}
-                type="text"
-              />
-              <i
-                onClick={this.btnHandler(btn)}
-                className={btncng}
-                name={btn}
-              ></i>
-            </form>
-
-            <div className="listdiv">
-              <ul>
-                {textArray.map((data, key) => {
-                  return (
-                    <li key={key} className={data.cr}>
-                      {data.val}
-                      <i
-                        onClick={this.deleteItem(key)}
-                        className="fas fa-trash-alt"
-                      ></i>
-                      <i
-                        onClick={this.updateHandler(key)}
-                        className="fas fa-pen"
-                      ></i>
-                      <i
-                        onClick={this.crossItem(key)}
-                        className="fas fa-clipboard-check"
-                      ></i>
-                    </li>
-                  );
-                })}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
+      <TodoComponent
+        warning={warning}
+        status={status}
+        enterkey={enterkey}
+        textInput={textInput}
+        inputHandler={inputHandler}
+        btnHandler={btnHandler}
+        btncng={btncng}
+        btn={btn}
+        deleteItem={deleteItem}
+        updateHandler={updateHandler}
+        crossItem={crossItem}
+        textArray={textArray}
+      />
     );
   }
 }

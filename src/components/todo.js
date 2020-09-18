@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import TodoComponent from "./todoComponent";
 
 export default function Todo() {
   const [textInput, settextInput] = useState("");
@@ -116,40 +117,23 @@ export default function Todo() {
       settextArray(todosf);
     }
   };
-
+  const inputHandler = (event) => {
+    event.target.name = settextInput(event.target.value);
+  };
   return (
-    <div className="fdiv">
-      <div className="cdiv">
-        <h1>Todo App</h1>
-        <p className={warning}>{status}</p>
-        <form action="" onSubmit={enterkey}>
-          <input
-            name="textInput"
-            type="text"
-            value={textInput}
-            onChange={(event) => settextInput(event.target.value)}
-          />
-          <i onClick={btnHandler(btn)} className={btncng} name={btn}></i>
-        </form>
-
-        <div className="listdiv">
-          <ul>
-            {textArray.map((data, key) => {
-              return (
-                <li key={key} className={data.cr}>
-                  {data.val}
-                  <i onClick={deleteItem(key)} className="fas fa-trash-alt"></i>
-                  <i onClick={updateHandler(key)} className="fas fa-pen"></i>
-                  <i
-                    onClick={crossItem(key)}
-                    className="fas fa-clipboard-check"
-                  ></i>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
-      </div>
-    </div>
+    <TodoComponent
+      warning={warning}
+      status={status}
+      enterkey={enterkey}
+      textInput={textInput}
+      inputHandler={inputHandler}
+      btnHandler={btnHandler}
+      btncng={btncng}
+      btn={btn}
+      deleteItem={deleteItem}
+      updateHandler={updateHandler}
+      crossItem={crossItem}
+      textArray={textArray}
+    />
   );
 }
