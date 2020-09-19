@@ -11,6 +11,16 @@ body {
 html {
   overflow-x: hidden;
 }
+h3 {
+  justify-content: center;
+  width: 30%;
+  border-style: dotted;
+  border-radius: 15px;
+  margin: auto;
+  padding: 5px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
 .fdiv {
   display: flex;
   flex-direction: row;

@@ -14,3 +14,4 @@ This is a simple Todo app developed using react, i just developed This Todo app 
 In this app i added basic functionalitys like add edit delete and check and i developed it as a prograssive web app so you can use even in offline and it uses browser local storage as database so dont remember to clear storage 	:joy:	:joy:	:joy:
 
 Hope you guys like this project and support me by star this project and follow me on github :stuck_out_tongue_closed_eyes: :stuck_out_tongue_closed_eyes: :stuck_out_tongue_closed_eyes:
+rf

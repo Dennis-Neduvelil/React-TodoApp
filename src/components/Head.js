@@ -1,16 +1,22 @@
-import React from 'react'
+import React from "react";
 import "./Head.css";
-import {Link} from 'react-router-dom'
+import { NavLink } from "react-router-dom";
 
 export default function Head() {
-    return (
-        <div>
-        <div className="headdiv">
-                <Link to="/">Class</Link>
-                <Link to="/function">Function</Link>
-                <Link to="/about">About</Link>
-        </div>
-       
-        </div>
-    )
+  const activeStyle = { color: "black" };
+  return (
+    <div>
+      <div className="headdiv">
+        <NavLink to="/" exact activeStyle={activeStyle}>
+          Home
+        </NavLink>
+        <NavLink to="/class" activeStyle={activeStyle}>
+          Class
+        </NavLink>
+        <NavLink to="/function" activeStyle={activeStyle}>
+          Function
+        </NavLink>
+      </div>
+    </div>
+  );
 }

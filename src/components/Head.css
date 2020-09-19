@@ -1,14 +1,14 @@
-.headdiv{
-    height: 8vh;
-    margin: 10px;
-    background-color:transparent;
-    text-align: center;
+.headdiv {
+  height: 60px;
+  margin: 10px;
+  background-color: transparent;
+  text-align: center;
 }
-.headdiv a{
-    padding: 10px;
-    text-transform: uppercase;
-    text-decoration: none;
-    margin-top: 10px;
-    color: teal;
-    font-weight: bold;
+.headdiv a {
+  padding: 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-top: 10px;
+  color: teal;
+  font-weight: bold;
 }
