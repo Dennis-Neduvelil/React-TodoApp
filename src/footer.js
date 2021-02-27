@@ -7,7 +7,7 @@ export default function Footer() {
         - Designed and Developed by{" "}
         <span>
           {" "}
-          Dennis <i className="fab fa-x fa-react fa-spin"></i>&nbsp;
+          Dennis and Dibin <i className="fab fa-x fa-react fa-spin"></i>&nbsp;
           <i
             onClick={() => {
               window.open("https://github.com/Dennis-Neduvelil/React-TodoApp");
