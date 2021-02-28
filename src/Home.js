@@ -1,6 +1,6 @@
 import React, { PureComponent } from "react";
 import Menu from "./components/Menu";
-import Welcome from "./components/welcome";
+import User from "./components/userRegistration";
 
 class Home extends PureComponent {
   state = {
@@ -25,7 +25,7 @@ class Home extends PureComponent {
     if (this.state.login === true) {
       return <Menu />;
     } else {
-      return <Welcome />;
+      return <User />;
     }
   }
 }

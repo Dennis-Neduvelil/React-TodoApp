@@ -1,19 +1,7 @@
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
-export default function Welcome() {
-  //styles
 
-  const cdiv = { "margin-top": "70px" };
-  const input = { width: "95%" };
-  const i = { "margin-top": "100px" };
-  const j = {
-    position: "relative",
-    bottom: "-63px",
-    cursor: "pointer",
-    "text-decoration": "none",
-    color: "black",
-    "font-weight": "bold",
-  };
+export default function User() {
   //use hooks
   let history = useHistory();
 
@@ -58,22 +46,22 @@ export default function Welcome() {
 
   return (
     <div>
-      <div className="fdiv" style={cdiv}>
-        <div className="cdiv">
+      <div className="">
+        <div className="">
           <h1>GET STARTED</h1>
           <p className={warning}>{status}</p>
           <input
             onChange={inputHandler}
             name={uname}
             value={uname}
-            style={input}
+            
             type="text"
             placeholder="Enter your name"
           />
-          <h3 onClick={btnHndl} style={i}>
+          <h3 onClick={btnHndl} >
             Next &nbsp;&nbsp;<i class="fas fa-chevron-right "></i>
           </h3>
-          <Link style={j} to="/about">
+          <Link to="/about">
             About &nbsp;&nbsp;<i class="fas fa-info-circle"></i>
           </Link>
         </div>

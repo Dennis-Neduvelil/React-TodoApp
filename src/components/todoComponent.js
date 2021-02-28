@@ -1,6 +1,5 @@
 import React from "react";
 import Head from "./Head";
-import "./todoapp.css";
 
 export default function todoComponent(props) {
   return (
