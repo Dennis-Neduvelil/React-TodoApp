@@ -26,7 +26,7 @@ export default function User() {
 
   const btnHndl = () => {
     if (uname === "") {
-      setstatus("*Please enter your name");
+      setstatus("*Please Enter Your Name");
       setwarning("warning");
       timer();
     } else {
@@ -45,30 +45,30 @@ export default function User() {
   };
 
   return (
-    <div className="container">
+    <div className="container section-margin user-registration">
       <div className="row">
-          <h1>GET STARTED</h1>
-          <p className={warning}>{status}</p>
-        </div>
+        <h1>GET STARTED</h1>
+        <p className={warning}>{status}</p>
+      </div>
         <div className="row">
-          <input
-            onChange={inputHandler}
-            name={uname}
-            value={uname}
-            type="text"
-            placeholder="Enter your name"
-          />
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              class="todo-input"
+              placeholder="Enter Your Name :"
+            />
+            </div>
+            </div>
+            <div className="row mb-3">
+            <button type="submit" id="button-addon2">
+              Next
+            </button>
         </div>
-        <div className="row">
-          <button onClick={btnHndl}>
-            Next &nbsp;&nbsp;<i class="fas fa-chevron-right "></i>
-          </button>
-        </div>
-        <div className="row">
+      <div className="row">
         <Link to="/about">
           About &nbsp;&nbsp;<i class="fas fa-info-circle"></i>
         </Link>
-        </div>
       </div>
+    </div>
   );
 }
