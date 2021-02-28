@@ -43,7 +43,7 @@ export default function Menu(props) {
       <div className="fdiv" style={cdiv}>
         <div className="cdiv">
           <h1>
-            Tu Tu Do...ToDo...<i class="far fa-smile-wink"></i>
+            Tu Tu Do...ToDo...
           </h1>
           <p>welcome to Todo App </p>
           <h2 style={h2}>Hey, {dname} Welcome to TodoApp</h2>

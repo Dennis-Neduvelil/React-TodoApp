@@ -45,27 +45,30 @@ export default function User() {
   };
 
   return (
-    <div>
-      <div className="">
-        <div className="">
+    <div className="container">
+      <div className="row">
           <h1>GET STARTED</h1>
           <p className={warning}>{status}</p>
+        </div>
+        <div className="row">
           <input
             onChange={inputHandler}
             name={uname}
             value={uname}
-            
             type="text"
             placeholder="Enter your name"
           />
-          <h3 onClick={btnHndl} >
+        </div>
+        <div className="row">
+          <button onClick={btnHndl}>
             Next &nbsp;&nbsp;<i class="fas fa-chevron-right "></i>
-          </h3>
-          <Link to="/about">
-            About &nbsp;&nbsp;<i class="fas fa-info-circle"></i>
-          </Link>
+          </button>
+        </div>
+        <div className="row">
+        <Link to="/about">
+          About &nbsp;&nbsp;<i class="fas fa-info-circle"></i>
+        </Link>
         </div>
       </div>
-    </div>
   );
 }
